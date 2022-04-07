@@ -1,0 +1,53 @@
+<MyTile@SmartTileWithStar>:
+    size_hint_y: None
+    height: "240dp"
+<Products>:
+    ScrollView:
+        MDGridLayout:
+            cols: 3
+            adaptive_height: True
+            padding: dp(4), dp(4)
+            spacing: dp(4)
+            MyTile:
+                stars: 5
+                source: "products/Product_1.jpg"
+                text: "[size=26]Product_1[/size]\n[size=14]Group_1[/size]"
+            MyTile:
+                stars: 5
+                source: "products/Product_2.jpg"
+                text: "[size=26]Product_2[/size]\n[size=14]Group_1[/size]"
+            MyTile:
+                stars: 4
+                source: "products/Product_3.jpg"
+                text: "[size=26]Product_3[/size]\n[size=14]Group_2[/size]"
+            MyTile:
+                stars: 4
+                source: "products/Product_4.jpg"
+                text: "[size=26]Product_4[/size]\n[size=14]Group_3[/size]"
+            MyTile:
+                stars: 4
+                source: "products/Product_5.jpg"
+                text: "[size=26]Product_5[/size]\n[size=14]Group_3[/size]"
+            MyTile:
+                stars: 3
+                source: "products/Product_6.jpg"
+                text: "[size=26]Product_6[/size]\n[size=14]Group_2[/size]"
+            MyTile:
+                stars: 2
+                source: "products/Product_7.jpg"
+                text: "[size=26]Product_7[/size]\n[size=14]Group_1[/size]"
+            MyTile:
+                stars: 2
+                source: "products/Product_8.jpg"
+                text: "[size=26]Product_8[/size]\n[size=14]Group_2[/size]"
+            MyTile:
+                stars: 2
+                source: "products/Product_9.jpg"
+                text: "[size=26]Product_9[/size]\n[size=14]Group_3[/size]"
+    MDFloatingActionButton:
+        icon: "arrow-left"
+        md_bg_color: app.theme_cls.primary_color
+        size: "400dp", "200dp"
+        pos_hint: {'center_x':0.9,'center_y':0.1}
+        on_press:
+            root.manager.set_current("part")

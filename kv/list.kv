@@ -1,0 +1,45 @@
+<ListItem>:
+    bg_color : [0.95, 0.94, 0.98, 0.8]
+    text_color : [0.22, 0.2, 0.27, 0.5]
+
+<OptimizedList>:
+    viewclass: 'ListItem'
+    RecycleBoxLayout:
+        default_size: None, dp(56)
+        default_size_hint: 1, None
+        size_hint_y: None
+        height: self.minimum_height
+        orientation: 'vertical'
+
+<ListScreen>:
+    name: 'List of Users'
+    canvas.before:
+        Color:
+            rgba: 255, 255, 255, 1
+        Rectangle:
+            pos:self.pos
+            size:self.size
+    id: listscreen
+    Image:
+        id: imageList
+        source: 'data/list.jpg'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+    RelativeLayout:
+        MDLabel:
+            id: title
+            text: 'List of Users'
+            font_style: 'H2'
+            bold: True
+            adaptive_height: True
+            font_name: 'data/font/Nunito-Bold.ttf'
+            text_color: [0.22, 0.2, 0.27, 0.5]
+            pos_hint: {"center_x": .53, "center_y": 0.9}
+        OptimizedList:
+            id: olist
+            pos_hint: {"center_y": 0.33}
+        MDFloatingActionButton:
+            id: button
+            icon: "plus"
+            md_bg_color: app.theme_cls.primary_color
+            on_release: root.manager.set_current("part")
+            pos_hint: {'center_x': 0.9, 'center_y': 0.1}

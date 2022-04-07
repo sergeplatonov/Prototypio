@@ -1,0 +1,42 @@
+{
+    "start": {
+        "import": "from libs.uix.baseclass.start import StartScreen",
+        "object": "StartScreen()",
+        "kv": "libs/uix/kv/start.kv"
+    },
+    "list": {
+        "import": "from libs.uix.baseclass.list import ListScreen",
+        "object": "ListScreen()",
+        "kv": "libs/uix/kv/list.kv"
+    },
+    "part": {
+    "import": "from libs.uix.baseclass.part import UserScreen",
+    "object": "UserScreen()",
+    "kv": "libs/uix/kv/user.kv"
+    },
+    "exec": {
+    "import": "from libs.uix.baseclass.exec import DetailView",
+    "object": "DetailView()",
+    "kv": "libs/uix/kv/detail.kv"
+    },
+    "rec": {
+    "import": "from libs.uix.baseclass.rec import RecordVideo",
+    "object": "RecordVideo()",
+    "kv": "libs/uix/kv/rec.kv"
+    },
+    "show": {
+    "import": "from libs.uix.baseclass.show import ShowVideo",
+    "object": "ShowVideo()",
+    "kv": "libs/uix/kv/show.kv"
+    },
+    "sum": {
+    "import": "from libs.uix.baseclass.summary import Summary",
+    "object": "Summary()",
+    "kv": "libs/uix/kv/summary.kv"
+    },
+    "trainer": {
+    "import": "from libs.uix.baseclass.trainer import Products",
+    "object": "Products()",
+    "kv": "libs/uix/kv/products.kv"
+    }
+}

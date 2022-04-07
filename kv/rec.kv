@@ -1,0 +1,40 @@
+<RecordVideo>:
+    canvas.before:
+        Color:
+            rgba: 255, 255, 255, 1
+        Rectangle:
+            pos:self.pos
+            size:self.size
+    name: 'Movie'
+    orientation: 'vertical'
+    spacing: 10
+    padding: 10
+    md_bg_color: 0, 1, 1, 1
+    Image:
+        id: imageCamera
+        pos_hint: {'center_x':0.5,'center_y':0.5}
+        allow_stretch : True
+    MDFloatingActionButton:
+        id: buttonStart
+        icon: "play"
+        md_bg_color: app.theme_cls.primary_color
+        size: "400dp", "200dp"
+        pos_hint: {'center_x':0.1,'center_y':0.1}
+        on_press: root.startCamera(imageCamera, buttonStart, buttonStop)
+        disabled: True
+    MDFloatingActionButton:
+        id: buttonStop
+        icon: "stop"
+        md_bg_color: app.theme_cls.primary_color
+        size: "400dp", "200dp"
+        pos_hint: {'center_x':0.3,'center_y':0.1}
+        on_press: root.stopCamera(imageCamera, buttonStart, buttonStop)
+        disabled: False
+    MDFloatingActionButton:
+        icon: "arrow-left"
+        md_bg_color: app.theme_cls.primary_color
+        size: "400dp", "200dp"
+        pos_hint: {'center_x':0.9,'center_y':0.1}
+        on_press:
+            root.stopCamera(imageCamera, buttonStart, buttonStop)
+            root.manager.set_current("sum")

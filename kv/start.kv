@@ -1,0 +1,28 @@
+<StartScreen>:
+    canvas.before:
+        Color:
+            rgba: 255, 255, 255, 1
+        Rectangle:
+            pos:self.pos
+            size:self.size
+    RelativeLayout:
+        Image:
+            id: imageStart
+            source: 'data/start.jpg'
+            pos_hint: {'center_x':0.5,'center_y':0.5}
+        MDLabel:
+            text: 'Welcome to Prototypio'
+            font_style: 'H2'
+            bold: True
+            adaptive_height: True
+            pos_hint: {"center_x": .7, "center_y": 0.9}
+            font_name: 'data/font/Nunito-Bold.ttf'
+            text_color: [0.22, 0.2, 0.27, 0.5]
+        MDFillRoundFlatButton:
+            id: startButton
+            text: 'Start'
+            font_style: 'H6'
+            pos_hint: {'center_x':0.5,'center_y':0.1}
+            font_name: 'data/font/Nunito-Bold.ttf'
+            size_hint: 0.25, 0.08
+            on_release: root.manager.set_current("list")
